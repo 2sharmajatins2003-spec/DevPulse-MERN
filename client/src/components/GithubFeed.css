@@ -1,0 +1,184 @@
+.github-card {
+  background: #1f2937;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+.github-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #60a5fa;
+  font-size: 24px;
+}
+
+.github-card img {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+}
+
+/* Stats */
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  flex: 1;
+  min-width: 110px;
+  background: #334155;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stats h3 {
+  margin: 0;
+  color: #22c55e;
+  font-size: 22px;
+}
+
+.stats span {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* Repository Card */
+
+.repo {
+  margin-top: 18px;
+  padding: 18px;
+  background: #334155;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.repo:hover {
+  transform: translateY(-3px);
+  background: #475569;
+}
+
+.repo h3 {
+  margin-bottom: 10px;
+  color: #60a5fa;
+  word-break: break-word;
+}
+
+.repo p {
+  margin: 6px 0;
+  color: #e2e8f0;
+  font-size: 15px;
+}
+
+.repo a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repo a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #475569;
+  margin-top: 18px;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .stats {
+    justify-content: center;
+  }
+
+  .stats div {
+    min-width: 140px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .github-card {
+    padding: 20px;
+  }
+
+  .github-card h2 {
+    font-size: 20px;
+  }
+
+  .github-card img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stats div {
+    width: 100%;
+  }
+
+  .repo {
+    padding: 15px;
+  }
+
+  .repo h3 {
+    font-size: 18px;
+  }
+
+  .repo p {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+  .github-card {
+    padding: 15px;
+  }
+
+  .github-card h2 {
+    font-size: 18px;
+  }
+
+  .github-card img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .stats h3 {
+    font-size: 18px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+
+  .repo h3 {
+    font-size: 16px;
+  }
+
+  .repo p,
+  .repo a {
+    font-size: 13px;
+  }
+}

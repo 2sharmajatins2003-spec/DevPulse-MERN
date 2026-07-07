@@ -1,0 +1,36 @@
+.dashboard {
+  padding: 40px;
+  background: #0f172a;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+
+  align-items: start;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+    gap: 20px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+    gap: 15px;
+  }
+}
