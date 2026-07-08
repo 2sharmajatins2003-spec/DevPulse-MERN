@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL:
+    import.meta.env.VITE_API_URL ||
+    "https://devpulse-backend-2s2c.onrender.com/api",
 });
 
 API.interceptors.request.use((config) => {
