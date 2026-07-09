@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import Login from "./pages/Login";
@@ -10,9 +10,19 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* Root URL ko login par redirect karega */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
+
+        {/* Login Page */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Register Page */}
         <Route path="/register" element={<Register />} />
+
+        {/* Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Profile */}
         <Route path="/profile" element={<Profile />} />
       </Routes>
 
